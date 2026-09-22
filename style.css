@@ -36,17 +36,17 @@ a {
 /* Ribbon + seal */
 .ribbon {
   position: relative;
-  width: 120px;
-  height: 90px;
+  width: 150px;
+  height: 380px;
   background: #003f8c;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 75px 75px;
   display: flex;
   justify-content: center;
 }
 
 .ribbon .seal {
   position: absolute;
-  top: 46px;
+  top: 236px;
   width: 130px;
   height: 130px;
   filter: drop-shadow(0 8px 18px rgba(0, 63, 140, 0.25));
@@ -176,13 +176,13 @@ a {
 
 @media (max-width: 560px) {
   .ribbon {
-    width: 96px;
-    height: 72px;
+    width: 108px;
+    height: 260px;
   }
   .ribbon .seal {
-    top: 36px;
-    width: 104px;
-    height: 104px;
+    top: 190px;
+    width: 122px;
+    height: 122px;
   }
   .cards {
     margin-top: 80px;
