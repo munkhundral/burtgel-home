@@ -30,7 +30,7 @@ body {
 }
 .page {
   position: relative;
-  max-width: 1200px;
+  max-width: 1800px;
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -40,10 +40,10 @@ body {
 
 .ribbon {
   position: relative;
-  width: 150px;
-  height: 380px;
+  width: clamp(130px, 9vw, 260px);
+  aspect-ratio: 170 / 220;
   background: var(--navy);
-  border-radius: 0 0 75px 75px;
+  border-radius: 0 0 47% 47% / 0 0 36% 36%;
   display: flex;
   justify-content: center;
 }
@@ -51,28 +51,16 @@ body {
 .ribbon .seal {
   position: absolute;
   left: 50%;
-  top: 236px;
-  width: 130px;
-  height: 130px;
+  top: 28%;
+  width: 82%;
+  height: 63%;
   transform: translateX(-50%);
   filter: drop-shadow(0 8px 18px rgba(0, 63, 140, 0.25));
 }
 
-@media (max-width: 560px) {
-  .ribbon {
-    width: 108px;
-    height: 260px;
-  }
-  .ribbon .seal {
-    top: 162px;
-    width: 89px;
-    height: 89px;
-  }
-}
-
 .hero-row {
   position: relative;
-  margin-top: 150px;
+  margin-top: clamp(50px, 8vw, 190px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,14 +71,14 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  gap: 130px;
+  gap: clamp(24px, 9vw, 160px);
 }
 
 .card {
   position: relative;
-  flex: 0 0 470px;
-  width: 470px;
-  max-width: 500px;
+  flex: 0 0 clamp(470px, 30vw, 620px);
+  width: clamp(470px, 30vw, 620px);
+  max-width: 620px;
   aspect-ratio: 500 / 340;
   background: var(--card-bg);
   border-radius: 16px;
@@ -123,7 +111,7 @@ body {
 }
 
 .card__title {
-  font-size: clamp(18px, 5vw, 25px);
+  font-size: clamp(18px, 1.6vw, 32px);
   font-weight: 500;
   line-height: 1.25;
   min-height: 4.4em;
@@ -134,7 +122,7 @@ body {
 
 .card__subtitle {
   margin-top: 18px;
-  font-size: clamp(10px, 2.4vw, 12px);
+  font-size: clamp(11px, 0.75vw, 16px);
   font-weight: 400;
   color: var(--blue);
 }
@@ -143,8 +131,8 @@ body {
   position: absolute;
   left: 26%;
   bottom: 6%;
-  width: 50px;
-  height: 50px;
+  width: clamp(44px, 3vw, 66px);
+  height: clamp(44px, 3vw, 66px);
   border-radius: 50%;
   background: var(--navy);
   color: #fff;
@@ -167,8 +155,8 @@ body {
 }
 
 .card__button svg {
-  width: 22px;
-  height: 22px;
+  width: clamp(18px, 1.3vw, 28px);
+  height: clamp(18px, 1.3vw, 28px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -232,13 +220,13 @@ body {
 
 .side-bichig img {
   height: 46vh;
-  max-height: 420px;
+  max-height: 520px;
   width: auto;
   opacity: 0.9;
 }
 .side-bichig .sidescript{
    height: 46vh;
-  max-height: 540px;
+  max-height: 640px;
   width: auto;
   opacity: 0.9;
 }
