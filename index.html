@@ -18,12 +18,6 @@
    
 
     <main class="page">
-       <div class="side-bichig side-bichig-left" aria-hidden="true">
-      <img src="./assets/muis_script.svg" alt="" />
-    </div>
-    <div class="side-bichig side-bichig-right" aria-hidden="true">
-      <img src="./assets/uria_script.svg" alt="" />
-    </div>
       <div class="ribbon">
         <img
           class="seal"
@@ -32,9 +26,13 @@
         />
       </div>
 
-      <div class="cards">
+      <div class="hero-row">
+        <div class="side-bichig side-bichig-left" aria-hidden="true">
+          <img class="sidescript" src="./assets/muis_script.svg" alt="" />
+        </div>
+
+        <div class="cards">
         <a class="card" href="https://burtgel.num.edu.mn/bachelor/" aria-label="Бакалаврын элсэлт">
-          <!-- Background: navy blob, light swoosh, faint open book -->
           <svg
             class="card__shape"
             viewBox="0 0 500 290"
@@ -54,7 +52,47 @@
               fill="#0f3f8f"
             />
             <!-- graduation cap -->
-            <img src="./assets/graduate-icon.svg" alt="">
+            <defs>
+              <linearGradient id="capDome" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0" stop-color="#EFF7FC" />
+                <stop offset="0.45" stop-color="#EFF7FC" />
+                <stop offset="1" stop-color="#D9E8F6" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(9 38) scale(0.8)">
+              <!-- dome (cap base) -->
+              <path d="M29 30 V50 C29 60 71 60 71 50 V30 Z" fill="url(#capDome)" />
+              <!-- board edge (thickness) -->
+              <path
+                d="M15 25 L52 43.5 L89 23 L89 26 L52 46.5 L15 28 Z"
+                fill="#B9D3F2"
+                stroke="#B9D3F2"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+              <!-- board top -->
+              <path
+                d="M15 25 L51 7 L89 23 L52 43.5 Z"
+                fill="#EFF7FC"
+                stroke="#EFF7FC"
+                stroke-width="5"
+                stroke-linejoin="round"
+              />
+              <!-- cord -->
+              <path
+                d="M54 22 L74 30 V44"
+                fill="none"
+                stroke="#EFD78E"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <!-- tassel: knot + skirt -->
+              <ellipse cx="74" cy="46" rx="3" ry="2.8" fill="#EFD78E" />
+              <path d="M71.8 48.5 H76.2 L78.2 58.5 C78.2 61.5 69.8 61.5 69.8 58.5 Z" fill="#EFD78E" />
+              <!-- button -->
+              <ellipse cx="53.5" cy="21.5" rx="3.2" ry="2.4" fill="#2F7FEF" />
+            </g>
             <!-- open book, bottom right -->
             <g fill="#EFF7FC" transform="translate(293 178) scale(0.939)">
               <path
@@ -120,13 +158,24 @@
               fill="#0f3f8f"
             />
             <!-- document icon -->
-            <g transform="translate(20 34)">
-              <path d="M6 0 H36 L48 12 V60 C48 63 45 66 42 66 H6 C3 66 0 63 0 60 V6 C0 3 3 0 6 0 Z" fill="#ffffff" />
-              <path d="M36 0 V9 C36 10.7 37.3 12 39 12 H48 Z" fill="#c9d3e2" />
-              <rect x="9" y="24" width="30" height="4" rx="2" fill="#dfe6f0" />
-              <rect x="9" y="34" width="30" height="4" rx="2" fill="#dfe6f0" />
-              <rect x="9" y="44" width="20" height="4" rx="2" fill="#dfe6f0" />
-              <circle cx="12" cy="8" r="3" fill="#f5b921" />
+            <g transform="translate(20 36) scale(0.85)">
+              <path
+                d="M37 61 H16.5 A3 3 0 0 1 13.5 58 V10 A3 3 0 0 1 16.5 7 H55 A3 3 0 0 1 58 10 V58 A3 3 0 0 1 55 61 H53.5"
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2.3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M22.5 21.5 H46 M22.5 28.5 H49.5 M22.5 35 H40"
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2.3"
+                stroke-linecap="round"
+              />
+              <path d="M40 51 L38 62 L45 58 L52 62 L50 51 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.8" stroke-linejoin="round" />
+              <path d="M37.7 47.5 A7.5 7.5 0 1 0 52.7 47.5 A7.5 7.5 0 1 0 37.7 47.5 Z" fill="#FFFFFF" />
+              <path d="M39.7 47.5 A5.5 5.5 0 1 0 50.7 47.5 A5.5 5.5 0 1 0 39.7 47.5 Z" fill="#FEBE06" />
             </g>
             <!-- open book, bottom right -->
             <g fill="#EFF7FC" transform="translate(293 178) scale(0.939)">
@@ -172,6 +221,11 @@
             </svg>
           </span>
         </a>
+        </div>
+
+        <div class="side-bichig side-bichig-right" aria-hidden="true">
+          <img src="./assets/uria_script.svg" alt="" />
+        </div>
       </div>
     </main>
   </body>
