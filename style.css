@@ -257,6 +257,36 @@ body {
   }
 }
 
+@media (max-height: 850px) and (min-width: 501px) {
+  .ribbon {
+    width: clamp(90px, 13vh, 200px);
+  }
+
+  .hero-row {
+    margin-top: clamp(16px, 6vh, 80px);
+  }
+
+  .card {
+    width: clamp(300px, 50vh, 620px);
+    flex: 0 0 clamp(300px, 50vh, 620px);
+  }
+
+  .site-footer {
+    padding: 24px 16px 16px;
+    gap: 10px;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .side-bichig img {
   height: 46vh;
   max-height: 420px;
