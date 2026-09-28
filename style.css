@@ -41,7 +41,7 @@ body {
 
 .ribbon {
   position: relative;
-  width: clamp(130px, 9vw, 260px);
+  width: clamp(176px, 12.2vw, 352px);
   aspect-ratio: 170 / 220;
   background: var(--navy);
   border-radius: 0 0 47% 47% / 0 0 36% 36%;
@@ -319,7 +319,7 @@ body {
 
 @media (max-height: 1010px) and (min-width: 501px) {
   .ribbon {
-    width: clamp(70px, 10vh, 160px);
+    width: clamp(96px, 13.5vh, 216px);
   }
 
   .hero-row {
