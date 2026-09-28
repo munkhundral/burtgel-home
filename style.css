@@ -41,7 +41,7 @@ body {
 
 .ribbon {
   position: relative;
-  width: clamp(174px, 12vw, 348px);
+  width: calc(var(--card-w) * 0.36);
   aspect-ratio: 170 / 220;
   background: var(--navy);
   border-radius: 0 0 47% 47% / 0 0 36% 36%;
@@ -318,10 +318,6 @@ body {
 }
 
 @media (max-height: 1010px) and (min-width: 501px) {
-  .ribbon {
-    width: clamp(95px, 13.4vh, 214px);
-  }
-
   .hero-row {
     margin-top: clamp(16px, 6vh, 80px);
   }
@@ -351,11 +347,5 @@ body {
   .social-icon svg {
     width: 16px;
     height: 16px;
-  }
-}
-
-@media (max-height: 700px) and (min-width: 1800px) {
-  .ribbon {
-    width: clamp(130px, 17vh, 260px);
   }
 }
