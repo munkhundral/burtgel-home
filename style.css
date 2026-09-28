@@ -353,3 +353,9 @@ body {
     height: 16px;
   }
 }
+
+@media (max-height: 700px) and (min-width: 1800px) {
+  .ribbon {
+    width: clamp(130px, 17vh, 260px);
+  }
+}
