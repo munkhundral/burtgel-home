@@ -23,7 +23,7 @@ body {
   background-color: #fafafa;
   background-image: url("./assets/bg-pattern.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: max(130vw, 201vh) auto;
   background-position: center;
   background-attachment: fixed;
   color: #003f8c;
