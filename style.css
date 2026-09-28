@@ -236,7 +236,8 @@ body {
     align-self: stretch;
     display: flex;
     flex-direction: column;
-    aspect-ratio: 500 / 370;
+    aspect-ratio: auto;
+    min-height: calc(min(100vw - 32px, 470px) * 370 / 500);
     overflow: clip;
   }
 
