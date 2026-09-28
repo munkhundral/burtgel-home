@@ -7,6 +7,7 @@
   --blue-halo: #d6e6f8;
   --line: #d9dee6;
   --card-bg: #ffffff;
+  --card-w: clamp(470px, 30vw, 620px);
 }
 
 * {
@@ -76,9 +77,10 @@ body {
 
 .card {
   position: relative;
-  flex: 0 0 clamp(470px, 30vw, 620px);
-  width: clamp(470px, 30vw, 620px);
+  flex: 0 0 var(--card-w);
+  width: var(--card-w);
   max-width: 620px;
+  container-type: inline-size;
   aspect-ratio: 500 / 340;
   background: var(--card-bg);
   border-radius: 16px;
@@ -111,18 +113,18 @@ body {
 }
 
 .card__title {
-  font-size: clamp(18px, 1.6vw, 32px);
+  font-size: max(18px, 5.2cqw);
   font-weight: 500;
   line-height: 1.25;
-  min-height: 4.4em;
+  min-height: 3.75em;
   color: var(--blue);
-  padding-bottom: 14px;
+  padding-bottom: 2.4cqw;
   border-bottom: 1px solid var(--line);
 }
 
 .card__subtitle {
-  margin-top: 18px;
-  font-size: clamp(11px, 0.75vw, 16px);
+  margin-top: 2.6cqw;
+  font-size: max(11px, 2.6cqw);
   font-weight: 400;
   color: var(--blue);
 }
@@ -131,8 +133,8 @@ body {
   position: absolute;
   left: 26%;
   bottom: 6%;
-  width: clamp(44px, 3vw, 66px);
-  height: clamp(44px, 3vw, 66px);
+  width: max(44px, 10cqw);
+  height: max(44px, 10cqw);
   border-radius: 50%;
   background: var(--navy);
   color: #fff;
@@ -155,8 +157,8 @@ body {
 }
 
 .card__button svg {
-  width: clamp(18px, 1.3vw, 28px);
-  height: clamp(18px, 1.3vw, 28px);
+  width: max(18px, 4.4cqw);
+  height: max(18px, 4.4cqw);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -324,9 +326,16 @@ body {
     margin-top: clamp(16px, 6vh, 80px);
   }
 
-  .card {
-    width: clamp(300px, 50vh, 620px);
-    flex: 0 0 clamp(300px, 50vh, 620px);
+  :root {
+    --card-w: clamp(420px, min(62vh, 30vw), 620px);
+  }
+
+  .side-bichig img {
+    height: min(calc(var(--card-w) * 0.73), 22.1vw);
+  }
+
+  .side-bichig .sidescript {
+    height: min(calc(var(--card-w) * 0.94), 28.42vw);
   }
 
   .site-footer {
