@@ -51,50 +51,8 @@
               d="M0 0 H80 Q100 0 100 20 V82 Q100 102 80 104 C50 107 16 118 0 142 Z"
               fill="#0f3f8f"
             />
-            <!-- graduation cap -->
-            <defs>
-              <linearGradient id="capDome" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#EFF7FC" />
-                <stop offset="0.45" stop-color="#EFF7FC" />
-                <stop offset="1" stop-color="#D9E8F6" />
-              </linearGradient>
-            </defs>
-            <g transform="translate(9 38) scale(0.8)">
-              <!-- dome (cap base) -->
-              <path d="M29 30 V50 C29 60 71 60 71 50 V30 Z" fill="url(#capDome)" />
-              <!-- board edge (thickness) -->
-              <path
-                d="M15 25 L52 43.5 L89 23 L89 26 L52 46.5 L15 28 Z"
-                fill="#B9D3F2"
-                stroke="#B9D3F2"
-                stroke-width="4"
-                stroke-linejoin="round"
-              />
-              <!-- board top -->
-              <path
-                d="M15 25 L51 7 L89 23 L52 43.5 Z"
-                fill="#EFF7FC"
-                stroke="#EFF7FC"
-                stroke-width="5"
-                stroke-linejoin="round"
-              />
-              <!-- cord -->
-              <path
-                d="M54 22 L74 30 V44"
-                fill="none"
-                stroke="#EFD78E"
-                stroke-width="2.4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <!-- tassel: knot + skirt -->
-              <ellipse cx="74" cy="46" rx="3" ry="2.8" fill="#EFD78E" />
-              <path d="M71.8 48.5 H76.2 L78.2 58.5 C78.2 61.5 69.8 61.5 69.8 58.5 Z" fill="#EFD78E" />
-              <!-- button -->
-              <ellipse cx="53.5" cy="21.5" rx="3.2" ry="2.4" fill="#2F7FEF" />
-            </g>
             <!-- open book, bottom right -->
-            <g fill="#EFF7FC" transform="translate(293 178) scale(0.939)">
+            <g id="cardBook" fill="#EFF7FC" transform="translate(293 178) scale(0.939)">
               <path
                 d="M16.0 116.0C18.2 116.5 29.4 113.9 38.5 113.5C47.6 113.1 62.4 113.4 70.8 113.8C79.1 114.1 80.6 114.4 88.8 115.8C96.9 117.1 117.5 122.3 119.8 121.8C122.0 121.2 107.8 114.9 102.5 112.5C97.2 110.1 94.0 108.7 87.8 107.2C81.5 105.8 70.5 104.4 65.0 103.8C59.5 103.1 58.8 103.1 54.8 103.5C50.7 103.9 45.4 104.8 40.5 106.0C35.6 107.2 29.6 109.1 25.5 110.8C21.4 112.4 13.8 115.5 16.0 116.0Z"
               />
@@ -114,6 +72,42 @@
                 d="M219.2 115.2C218.6 114.3 216.8 112.0 214.5 110.5C212.2 109.0 208.5 107.2 205.8 106.0C203.0 104.8 201.6 104.0 197.8 103.5C193.9 103.0 187.4 102.5 182.5 102.8C177.6 103.0 172.8 103.8 168.5 104.8C164.2 105.7 163.2 105.7 157.0 108.5C150.8 111.3 131.4 120.5 131.5 121.8C131.6 123.0 150.7 117.1 157.5 115.8C164.3 114.4 166.2 114.1 172.5 113.8C178.8 113.4 187.4 113.3 195.0 113.8C202.6 114.2 214.2 116.0 218.2 116.2C222.3 116.5 219.9 116.2 219.2 115.2Z"
               />
             </g>
+          </svg>
+
+          <!-- mobile background: same shapes drawn for the taller card, so nothing is stretched -->
+          <svg
+            class="card__shape card__shape--m"
+            viewBox="0 0 500 370"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path d="M395 0 H500 V60 C470 25 430 10 395 0 Z" fill="#EFF7FC" />
+            <path
+              d="M0 0 H100 V96 C100 140 38 158 42 205 C46 275 115 335 175 370 H0 Z"
+              fill="#EFF7FC"
+            />
+            <path
+              d="M0 0 H80 Q100 0 100 20 V82 Q100 102 80 104 C50 107 16 118 0 142 Z"
+              fill="#0f3f8f"
+            />
+            <use href="#cardBook" transform="translate(0 80)" />
+          </svg>
+
+          <svg class="card__icon" viewBox="0 0 104 69" aria-hidden="true">
+            <defs>
+              <linearGradient id="capDome" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0" stop-color="#EFF7FC" />
+                <stop offset="0.45" stop-color="#EFF7FC" />
+                <stop offset="1" stop-color="#D9E8F6" />
+              </linearGradient>
+            </defs>
+            <path d="M29 30 V50 C29 60 71 60 71 50 V30 Z" fill="url(#capDome)" />
+            <path d="M15 25 L52 43.5 L89 23 L89 26 L52 46.5 L15 28 Z" fill="#B9D3F2" stroke="#B9D3F2" stroke-width="4" stroke-linejoin="round" />
+            <path d="M15 25 L51 7 L89 23 L52 43.5 Z" fill="#EFF7FC" stroke="#EFF7FC" stroke-width="5" stroke-linejoin="round" />
+            <path d="M54 22 L74 30 V44" fill="none" stroke="#EFD78E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+            <ellipse cx="74" cy="46" rx="3" ry="2.8" fill="#EFD78E" />
+            <path d="M71.8 48.5 H76.2 L78.2 58.5 C78.2 61.5 69.8 61.5 69.8 58.5 Z" fill="#EFD78E" />
+            <ellipse cx="53.5" cy="21.5" rx="3.2" ry="2.4" fill="#2F7FEF" />
           </svg>
 
           <div class="card__content">
@@ -157,42 +151,6 @@
               d="M0 0 H80 Q100 0 100 20 V82 Q100 102 80 104 C50 107 16 118 0 142 Z"
               fill="#0f3f8f"
             />
-            <!-- graduate-negdsen icon -->
-            <defs>
-              <linearGradient id="capDome2" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#EFF7FC" />
-                <stop offset="0.45" stop-color="#EFF7FC" />
-                <stop offset="1" stop-color="#D9E8F6" />
-              </linearGradient>
-            </defs>
-            <g transform="translate(9 38) scale(0.8)">
-              <path d="M29 30 V50 C29 60 71 60 71 50 V30 Z" fill="url(#capDome2)" />
-              <path
-                d="M15 25 L52 43.5 L89 23 L89 26 L52 46.5 L15 28 Z"
-                fill="#B9D3F2"
-                stroke="#B9D3F2"
-                stroke-width="4"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M15 25 L51 7 L89 23 L52 43.5 Z"
-                fill="#EFF7FC"
-                stroke="#EFF7FC"
-                stroke-width="5"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M54 22 L74 30 V44"
-                fill="none"
-                stroke="#E53935"
-                stroke-width="2.4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <ellipse cx="74" cy="46" rx="3" ry="2.8" fill="#E53935" />
-              <path d="M71.8 48.5 H76.2 L78.2 58.5 C78.2 61.5 69.8 61.5 69.8 58.5 Z" fill="#E53935" />
-              <ellipse cx="53.5" cy="21.5" rx="3.2" ry="2.4" fill="#2F7FEF" />
-            </g>
             <!-- open book, bottom right -->
             <g fill="#EFF7FC" transform="translate(293 178) scale(0.939)">
               <path
@@ -214,6 +172,42 @@
                 d="M219.2 115.2C218.6 114.3 216.8 112.0 214.5 110.5C212.2 109.0 208.5 107.2 205.8 106.0C203.0 104.8 201.6 104.0 197.8 103.5C193.9 103.0 187.4 102.5 182.5 102.8C177.6 103.0 172.8 103.8 168.5 104.8C164.2 105.7 163.2 105.7 157.0 108.5C150.8 111.3 131.4 120.5 131.5 121.8C131.6 123.0 150.7 117.1 157.5 115.8C164.3 114.4 166.2 114.1 172.5 113.8C178.8 113.4 187.4 113.3 195.0 113.8C202.6 114.2 214.2 116.0 218.2 116.2C222.3 116.5 219.9 116.2 219.2 115.2Z"
               />
             </g>
+          </svg>
+
+          <!-- mobile background: same shapes drawn for the taller card, so nothing is stretched -->
+          <svg
+            class="card__shape card__shape--m"
+            viewBox="0 0 500 370"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path d="M395 0 H500 V60 C470 25 430 10 395 0 Z" fill="#EFF7FC" />
+            <path
+              d="M0 0 H100 V96 C100 140 38 158 42 205 C46 275 115 335 175 370 H0 Z"
+              fill="#EFF7FC"
+            />
+            <path
+              d="M0 0 H80 Q100 0 100 20 V82 Q100 102 80 104 C50 107 16 118 0 142 Z"
+              fill="#0f3f8f"
+            />
+            <use href="#cardBook" transform="translate(0 80)" />
+          </svg>
+
+          <svg class="card__icon" viewBox="0 0 104 69" aria-hidden="true">
+            <defs>
+              <linearGradient id="capDome2" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0" stop-color="#EFF7FC" />
+                <stop offset="0.45" stop-color="#EFF7FC" />
+                <stop offset="1" stop-color="#D9E8F6" />
+              </linearGradient>
+            </defs>
+            <path d="M29 30 V50 C29 60 71 60 71 50 V30 Z" fill="url(#capDome2)" />
+            <path d="M15 25 L52 43.5 L89 23 L89 26 L52 46.5 L15 28 Z" fill="#B9D3F2" stroke="#B9D3F2" stroke-width="4" stroke-linejoin="round" />
+            <path d="M15 25 L51 7 L89 23 L52 43.5 Z" fill="#EFF7FC" stroke="#EFF7FC" stroke-width="5" stroke-linejoin="round" />
+            <path d="M54 22 L74 30 V44" fill="none" stroke="#E53935" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+            <ellipse cx="74" cy="46" rx="3" ry="2.8" fill="#E53935" />
+            <path d="M71.8 48.5 H76.2 L78.2 58.5 C78.2 61.5 69.8 61.5 69.8 58.5 Z" fill="#E53935" />
+            <ellipse cx="53.5" cy="21.5" rx="3.2" ry="2.4" fill="#2F7FEF" />
           </svg>
 
           <div class="card__content">
