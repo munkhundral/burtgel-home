@@ -23,7 +23,6 @@ body {
   background-color: #fafafa;
   background-image: url("./assets/bg-tile.png");
   background-repeat: repeat;
-  /* same scale the old 1728x1117 image got from `cover`, but never upscaled past 1:1 */
   background-size:
     min(840px, max(48.611vw, 75.201vh))
     min(721px, max(41.725vw, 64.548vh));
@@ -47,7 +46,6 @@ body {
   width: calc(var(--card-w) * 0.4);
   aspect-ratio: 170 / 220;
   background: var(--navy);
-  /* bottom is a true semicircle (radius = W/2 = 38.6% of H), concentric with the seal */
   border-radius: 0 0 50% 50% / 0 0 38.6% 38.6%;
   display: flex;
   justify-content: center;
@@ -114,6 +112,18 @@ body {
 
 .card__shape--m {
   display: none;
+}
+
+.card__watermark {
+  position: absolute;
+  right: -4cqw;
+  bottom: -3cqw;
+  width: 44cqw;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom right, transparent 10%, #000 60%);
+  mask-image: linear-gradient(to bottom right, transparent 10%, #000 60%);
 }
 
 .card__ribbon {
