@@ -21,9 +21,12 @@ body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   background-color: #fafafa;
-  background-image: url("./assets/bg-pattern.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("./assets/bg-tile.png");
+  background-repeat: repeat;
+  /* same scale the old 1728x1117 image got from `cover`, but never upscaled past 1:1 */
+  background-size:
+    min(840px, max(48.611vw, 75.201vh))
+    min(721px, max(41.725vw, 64.548vh));
   background-position: center;
   background-attachment: fixed;
   color: #003f8c;
